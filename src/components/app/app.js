@@ -2,6 +2,7 @@ import {Component} from 'react'
 import './app.css'
 import '../../fonsts/font.css'
 import MainSection from '../main-section/main-section';
+import Burger from '../burger/burger';
 
 class App extends Component{
     state = {
@@ -14,6 +15,7 @@ class App extends Component{
 
         return(
             <>
+                <Burger/>
                 <MainSection/>
 
             </>

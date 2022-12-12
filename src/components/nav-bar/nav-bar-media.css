@@ -1,0 +1,11 @@
+@media (max-width: 1200px){
+    .navBarWrapper{
+        left:90px;
+    }
+}
+
+@media (max-width: 824px){
+    .navBarWrapper{
+        display: none;
+    }
+}

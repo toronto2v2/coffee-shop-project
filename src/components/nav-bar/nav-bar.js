@@ -1,8 +1,10 @@
 import { Component } from "react";
 import styled from "styled-components";
 import './nav-bar.css'
+import './nav-bar-media.css'
 
-const NavBarWrapper = styled.div`
+
+const NavBarWrapper = styled.ul`
     display: flex;
     gap: 40px;
         &::before{
@@ -11,6 +13,9 @@ const NavBarWrapper = styled.div`
             left: -35px;
             bottom: -10px;
             
+        }
+        li{
+            list-style-type: none;
         }
         a{
             text-decoration: none;
@@ -23,7 +28,9 @@ const NavBarWrapper = styled.div`
                     &:hover{
             transform: scale(1.07)
         }
-        }
+    @media (max-width: 824px){
+        display: none;
+    }
 
 `
 
@@ -34,9 +41,9 @@ class NavBar extends Component{
         return(
             <nav className="navBarWrapper">
                 <NavBarWrapper img = {img} color = {color}>
-                    <a className="navBar__item" href ='google.com'>Coffee house</a>
-                    <a className="navBar__item" href ='google.com'>Our coffee</a>
-                    <a className="navBar__item" href ='google.com'>For your pleasure</a>
+                    <li><a className="navBar__item" href ='google.com'>Coffee house</a></li>
+                    <li><a className="navBar__item" href ='google.com'>Our coffee</a></li>
+                    <li><a className="navBar__item" href ='google.com'>For your pleasure</a></li>
                 </NavBarWrapper>
             </nav>
 
